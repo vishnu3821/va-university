@@ -1,0 +1,88 @@
+.homepage-container {
+  height: 100vh;
+  width: 100%;
+
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 50px;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.homepage-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.homepage-tagline {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.login-btn {
+  padding: 12px 30px;
+  font-size: 1rem;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #e64a19;
+}
+
+.login-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.login-popup-content {
+  position: relative;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  animation: slideUp 0.4s ease-in-out;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-size: 1.5rem;
+  color: #888;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
