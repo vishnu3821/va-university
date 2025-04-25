@@ -10,7 +10,7 @@ const AdminLogin = () => {
   const handleAdminLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/admin/login', { email, password });
+      const res = await axios.post('https://va-university-backend.onrender.com/admin/login', { email, password });
       if (res.data.success) {
         navigate('/admin/dashboard');
       }

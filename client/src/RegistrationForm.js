@@ -29,7 +29,7 @@ function RegistrationForm() {
     setErrorMessage(''); // Clear any previous error messages
 
     try {
-      const res = await axios.post('http://localhost:5000/register', formData);
+      const res = await axios.post('https://va-university-backend.onrender.com/register', formData);
       alert(res.data.message);
       // Redirect to login page after successful registration
       window.location.href = '/';

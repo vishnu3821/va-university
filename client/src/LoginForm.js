@@ -18,7 +18,7 @@ const LoginForm = ({ onLogin }) => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/login', {
+      const response = await axios.post('https://va-university-backend.onrender.com/login', {
         email,
         password,
       });

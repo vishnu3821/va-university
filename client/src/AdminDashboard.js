@@ -7,14 +7,14 @@ const AdminDashboard = () => {
   const [attendanceData, setAttendanceData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/admin/students/count')
+    axios.get('https://va-university-backend.onrender.com/admin/students/count')
       .then(res => setStudentCount(res.data.count))
       .catch(err => console.error(err));
   }, []);
 
   const fetchAttendance = () => {
     if (!rollNo) return;
-    axios.get(`http://localhost:5000/admin/attendance/${rollNo}`)
+    axios.get(`https://va-university-backend.onrender.com/admin/attendance/${rollNo}`)
       .then(res => setAttendanceData(res.data))
       .catch(() => alert('No attendance data found'));
   };
